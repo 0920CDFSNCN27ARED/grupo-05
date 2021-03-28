@@ -226,8 +226,7 @@ nav ul li a:focus {
 }
 
 .product-card img {
-    height: 25vh;
-    object-fit: cover;
+    height: 20vh;
 }
 
 .product-card:hover {
@@ -347,8 +346,7 @@ footer h4 {
 
 @media (min-width: 375px) {
     .product-card img {
-        height: 30vh;
-        object-fit: cover;
+        height: 25vh;
     }
 }
 
@@ -356,8 +354,15 @@ footer h4 {
 
 @media (min-width: 480px) {
     .product-card img {
+        height: 30vh;
+    }
+}
+
+/* Medida de tarjetas de producto desde 600 */
+
+@media (min-width: 600px) {
+    .product-card img {
         height: 35vh;
-        object-fit: cover;
     }
 }
 
@@ -412,6 +417,10 @@ footer h4 {
         width: 25%;
     }
 
+    .product-card img {
+        height: 25vh;
+    }
+
     /* Se agrandan precios de cards */
 
     .product-card-price p {
@@ -432,6 +441,11 @@ footer h4 {
 /* Se agrandan iconos y fonts a medida que crece el width de la pantalla */
 
 @media (min-width: 1024px) {
+
+    .product-card img {
+        height: 30vh;
+    }
+
     .product-card-price {
         padding: 0px 15%;
     }
@@ -451,6 +465,11 @@ footer h4 {
 }
 
 @media (min-width: 1440px) {
+
+    .product-card img {
+        height: 35vh;
+    }
+
     .fa-shopping-cart,
     .fa-user {
         font-size: 20px;
