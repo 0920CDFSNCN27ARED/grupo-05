@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SideMenuLink from "./SideMenuLink/SideMenuLink";
 
 function SideMenu() {
@@ -18,15 +19,21 @@ function SideMenu() {
 
       <hr className="sidebar-divider my-0" />
 
-      <SideMenuLink title="General Information" />
+      <Link to="/">
+        <SideMenuLink title="General Information" />
+      </Link>
 
       <hr className="sidebar-divider" />
 
       <div className="sidebar-heading">Actions</div>
 
-      <SideMenuLink title="Listed Products" />
+      <Link to="/products">
+        <SideMenuLink title="Listed Products" />
+      </Link>
 
-      <SideMenuLink title="Listed Users" />
+      <Link to="/users">
+        <SideMenuLink title="Registered Users" />
+      </Link>
 
       <SideMenuLink title="More..." />
 
