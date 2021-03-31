@@ -1,6 +1,7 @@
 import { Component } from "react";
 import Header from "../components/Header/Header";
 import SideMenu from "../components/SideMenu/SideMenu";
+import UsersTable from "../components/Tables/UsersTable";
 import "../App.css";
 
 class UsersScreen extends Component {
@@ -44,7 +45,28 @@ class UsersScreen extends Component {
                   <h1 className="h3 mb-0 text-gray-800">Registered Users</h1>
                 </div>
                 <div>
-                  <p>{this.state.userList.map((user) => user.id)}</p>
+                  <table className="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">User</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Address</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {this.state.userList.map((user) => (
+                        <UsersTable
+                          id={user.id}
+                          user={user.user}
+                          name={user.name}
+                          email={user.email}
+                          address={user.address}
+                        />
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import { Component } from "react";
 import Header from "../components/Header/Header";
 import SideMenu from "../components/SideMenu/SideMenu";
+import ProductsTable from "../components/Tables/ProductsTable";
 import "../App.css";
 
 class ProductsScreen extends Component {
@@ -48,7 +49,32 @@ class ProductsScreen extends Component {
                   <h1 className="h3 mb-0 text-gray-800">Listed Products</h1>
                 </div>
                 <div>
-                  <p>{this.state.productList.map((product) => product.name)}</p>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Discount</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Image</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {this.state.productList.map((product) => (
+                        <ProductsTable
+                          id={product.id}
+                          name={product.name}
+                          description={product.description}
+                          price={product.price}
+                          discount={product.discount}
+                          category={product.product_category.name}
+                          image={product.image}
+                        />
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
