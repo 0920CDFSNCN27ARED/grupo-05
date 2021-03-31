@@ -6,7 +6,33 @@ import "../App.css";
 class ProductsScreen extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      productList: [
+        {
+          id: "",
+          name: "",
+          description: "",
+          price: "",
+          discount: "",
+          image: "",
+          product_category: {
+            name: "",
+          },
+          detail: "",
+        },
+      ],
+    };
+  }
+
+  async componentDidMount() {
+    const response = await fetch("http://localhost:3000/api/products");
+    const responseJSON = await response.json();
+    const products = responseJSON.data;
+    console.log(products);
+
+    this.setState({
+      productList: products,
+    });
   }
 
   render() {
@@ -22,7 +48,7 @@ class ProductsScreen extends Component {
                   <h1 className="h3 mb-0 text-gray-800">Listed Products</h1>
                 </div>
                 <div>
-                  <p>Listed products here</p>
+                  <p>{this.state.productList.map((product) => product.name)}</p>
                 </div>
               </div>
             </div>

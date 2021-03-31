@@ -6,7 +6,29 @@ import "../App.css";
 class UsersScreen extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      userList: [
+        {
+          id: "",
+          user: "",
+          name: "",
+          email: "",
+          address: "",
+          detail: "",
+        },
+      ],
+    };
+  }
+
+  async componentDidMount() {
+    const response = await fetch("http://localhost:3000/api/users");
+    const responseJSON = await response.json();
+    const users = responseJSON.data;
+
+    this.setState({
+      userList: users,
+    });
+    console.log(this.state);
   }
 
   render() {
@@ -22,7 +44,7 @@ class UsersScreen extends Component {
                   <h1 className="h3 mb-0 text-gray-800">Registered Users</h1>
                 </div>
                 <div>
-                  <p>Registered users here</p>
+                  <p>{this.state.userList.map((user) => user.id)}</p>
                 </div>
               </div>
             </div>

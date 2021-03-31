@@ -128,7 +128,7 @@ class HomeScreen extends Component {
     const bigCardsValues = [
       {
         title: "Productos por categoría",
-        value: await await this.getProductsCategories(),
+        value: await this.getProductsCategories(),
         image: "",
       },
       {
