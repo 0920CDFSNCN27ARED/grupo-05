@@ -14,7 +14,7 @@ function SideMenu() {
         <div className="sidebar-brand-icon">
           <i className="fas fa-chart-line"></i>
         </div>
-        <div className="sidebar-brand-text mx-3">Admin</div>
+        <div className="sidebar-brand-text mx-3">Level-Up Admin</div>
       </a>
 
       <hr className="sidebar-divider my-0" />
@@ -25,8 +25,6 @@ function SideMenu() {
 
       <hr className="sidebar-divider" />
 
-      <div className="sidebar-heading">Actions</div>
-
       <Link to="/products">
         <SideMenuLink title="Listed Products" />
       </Link>
@@ -36,8 +34,6 @@ function SideMenu() {
       </Link>
 
       <SideMenuLink title="More..." />
-
-      <hr className="sidebar-divider d-none d-md-block" />
     </ul>
   );
 }
