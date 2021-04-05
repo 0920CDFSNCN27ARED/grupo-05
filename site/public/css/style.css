@@ -34,8 +34,8 @@ header {
 }
 nav {
     position: absolute;
-    display: flex !important;
-    flex-direction: column !important;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     background-color: #3d4852;
     top: 85px;
@@ -225,10 +225,6 @@ nav ul li a:focus {
     text-align: center;
 }
 
-.product-card img {
-    height: 20vh;
-}
-
 .product-card:hover {
     opacity: 85%;
     transition: all 1s;
@@ -299,12 +295,12 @@ footer h4 {
 }
 
 .btn {
+    margin-top: 8px;
     margin-bottom: 8px;
     border: none;
     background-color: #231f20;
     color: #91d2be !important;
     padding: 5px;
-    width: 100%;
 }
 
 .datos-contact {
@@ -341,30 +337,6 @@ footer h4 {
 }
 
 /* MEDIA QUERIES */
-
-/* Medida de tarjetas de producto desde 375px */
-
-@media (min-width: 375px) {
-    .product-card img {
-        height: 25vh;
-    }
-}
-
-/* Medida de tarjetas de producto desde 480px */
-
-@media (min-width: 480px) {
-    .product-card img {
-        height: 30vh;
-    }
-}
-
-/* Medida de tarjetas de producto desde 600 */
-
-@media (min-width: 600px) {
-    .product-card img {
-        height: 35vh;
-    }
-}
 
 /* Barra de busqueda en pantallas desde 768px */
 
@@ -417,10 +389,6 @@ footer h4 {
         width: 25%;
     }
 
-    .product-card img {
-        height: 25vh;
-    }
-
     /* Se agrandan precios de cards */
 
     .product-card-price p {
@@ -441,11 +409,6 @@ footer h4 {
 /* Se agrandan iconos y fonts a medida que crece el width de la pantalla */
 
 @media (min-width: 1024px) {
-
-    .product-card img {
-        height: 30vh;
-    }
-
     .product-card-price {
         padding: 0px 15%;
     }
@@ -465,11 +428,6 @@ footer h4 {
 }
 
 @media (min-width: 1440px) {
-
-    .product-card img {
-        height: 35vh;
-    }
-
     .fa-shopping-cart,
     .fa-user {
         font-size: 20px;

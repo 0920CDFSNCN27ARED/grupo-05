@@ -1,14 +1,4 @@
-.register-back {
-    display: flex;
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    background-image: url("../images/layout/benner_reg_log.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* line-height: 0.5rem !important; */
-}
+.register-back,
 .login-back {
     display: flex;
     width: 100%;
@@ -17,7 +7,6 @@
     background-image: url("../images/layout/benner_reg_log.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .create-back {
@@ -31,15 +20,14 @@
     background-size: cover;
 }
 
-.contact-back {
+.create-back {
     display: flex;
     width: 100%;
     height: auto;
     padding: 20px;
-    background-image: url("../images/layout/banner-contact.jpg");
+    background-image: url("../images/layout/banner-create.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .form-box {
