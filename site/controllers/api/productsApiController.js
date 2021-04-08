@@ -4,6 +4,7 @@ const db = require("../../database/models");
 productsController = {
     list: async (req, res) => {
         const products = await db.Product.findAll({
+            order: [["id", "ASC"]],
             include: [{ association: "product_category" }],
         });
 

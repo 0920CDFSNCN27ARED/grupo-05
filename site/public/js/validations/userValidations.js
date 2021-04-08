@@ -60,6 +60,7 @@ window.addEventListener("load", () => {
         ]);
         comparePassword(passwordInput, password2Input);
         checkErrors();
+        console.log(errors);
 
         if (checkErrors()) {
             event.preventDefault();
@@ -190,10 +191,12 @@ function validateFile(avatar) {
     if (!allowedExtensions.includes(fileExtension)) {
         error.msg = "La imagen debe ser en formato jpg, jpeg, png ó gif";
         avatar.value = null;
+        errors.push(error);
+        checkErrors();
     } else if (fileSize > sizeLimit) {
         error.msg = "La imagen debe ser de 3 mb como máximo";
         avatar.value = null;
+        errors.push(error);
+        checkErrors();
     }
-    errors.push(error);
-    checkErrors();
 }

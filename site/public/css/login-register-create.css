@@ -1,5 +1,4 @@
-.register-back,
-.login-back {
+.register-back {
     display: flex;
     width: 100%;
     height: auto;
@@ -7,14 +6,15 @@
     background-image: url("../images/layout/benner_reg_log.jpg");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    /* line-height: 0.5rem !important; */
 }
-
-.create-back {
+.login-back {
     display: flex;
     width: 100%;
     height: auto;
     padding: 20px;
-    background-image: url("../images/layout/banner-create.jpg");
+    background-image: url("../images/layout/benner_reg_log.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,6 +28,18 @@
     background-image: url("../images/layout/banner-create.jpg");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-back {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-image: url("../images/layout/banner-contact.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .form-box {
@@ -45,7 +57,22 @@
     color: #f9ef64;
 }
 
-.form-box textarea {
+.form-box-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    min-width: 250px;
+    max-width: 400px;
+    /* max-width: 50vw; */
+    padding: 0px 20px 20px 20px;
+    background-color: #000000;
+    margin: auto;
+    height: 450px;
+    color: #f9ef64;
+}
+
+.form-box textarea, .form-box-login textarea {
     height: 17vh;
     margin: 8px 0px;
     width: 100%;
@@ -282,13 +309,13 @@
     margin: 5px;
 }
 
-.form-box a {
+.form-box a, .form-box-login a {
     text-decoration: none;
     font-size: 14px;
     text-align: center;
 }
 
-.form-box p {
+.form-box p, .form-box-login p {
     margin-top: 1px;
 }
 

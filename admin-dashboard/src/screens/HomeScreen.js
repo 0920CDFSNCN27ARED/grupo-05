@@ -33,8 +33,14 @@ class HomeScreen extends Component {
       bigCardsValues: [
         {
           title: "Productos por categoría",
+          value: "",
+          image: "",
         },
-        { title: "Último producto cargado" },
+        {
+          title: "Último producto cargado",
+          value: "",
+          image: "",
+        },
       ],
     };
   }
@@ -62,18 +68,19 @@ class HomeScreen extends Component {
   async getProductsCategories() {
     const countResponse = await this.queryProductsAPI("");
     const productsCategories = countResponse.meta.countByCategory;
-    const consolesCount = `Consoles: ${productsCategories.consoles}`;
-    const gamesCount = `Games: ${productsCategories.games}`;
-    const accesoriesCount = `Accesories: ${productsCategories.accesories}`;
-    const retroCount = `Retro: ${productsCategories.retro}`;
+    const consolesCount = `Consoles: ${productsCategories.consoles} `;
+    const gamesCount = `Games: ${productsCategories.games} `;
+    const accesoriesCount = `Accesories: ${productsCategories.accesories} `;
+    const retroCount = `Retro: ${productsCategories.retro} `;
     const totalCountArray = [
       consolesCount,
       gamesCount,
       accesoriesCount,
       retroCount,
     ];
+    const productCategoryList = totalCountArray.map((item) => <li>{item}</li>);
 
-    return totalCountArray;
+    return productCategoryList;
   }
 
   async getLastProduct() {
@@ -87,7 +94,9 @@ class HomeScreen extends Component {
       lastProductDescription,
       lastProductPrice,
     ];
-    return lastProductArray;
+
+    const lastProductList = lastProductArray.map((item) => <li>{item}</li>);
+    return lastProductList;
   }
 
   async getLastProductImage() {
