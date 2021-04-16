@@ -88,7 +88,7 @@ class HomeScreen extends Component {
     const lastProduct = countResponse.data[countResponse.data.length - 1];
     const lastProductName = `Product: ${lastProduct.name},`;
     const lastProductDescription = `Description: ${lastProduct.description}`;
-    const lastProductPrice = `Price: ${lastProduct.price}`;
+    const lastProductPrice = `Price: $${lastProduct.price}`;
     const lastProductArray = [
       lastProductName,
       lastProductDescription,

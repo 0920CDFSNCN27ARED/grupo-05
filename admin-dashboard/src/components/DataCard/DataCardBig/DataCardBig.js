@@ -16,7 +16,9 @@ export default function DataCardBig(props) {
               alt="Categories"
             />
           </div>
-          <p>{props.value}</p>
+          <p className="m-0 font-weight-bold" style={{ listStyle: "none" }}>
+            {props.value}
+          </p>
         </div>
       </div>
     </div>
