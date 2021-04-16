@@ -95,3 +95,30 @@ A la hora de organizar nuestras tareas y facilitar la dinámica del trabajo en e
 -   `/product/edit/:id/`: Página de edición de producto.
 
 -   `/product/delete/:id/`: Página de eliminación de producto.
+
+## API
+
+El proyecto cuenta con una API propia con los siguientes endpoints:
+
+-   `/api/products`: Listado de productos publicados.
+
+-   `/api/products/:id`: Detalle de producto.
+
+-   `/api/users`: Listado de usuarios registrados.
+
+-   `/api/users/:id`: Detalle de usuario.
+
+## React Admin Dashboard
+
+El proyecto cuenta con un panel de control desarrollado utilizando React, en el cual se muestra la siguiente información obtenida a través de la API:
+
+### Home: Información general
+- Cantidad total de productos publicados.
+- Cantidad total de usuarios registrados.
+- Valor total en pesos de productos en stock.
+
+### Products: Detalle de productos
+- Listado detallado de todos los productos publicados y su información disponible.
+
+### Users: Detalle de usuarios
+- Listado detallado de todos los usuarios registrados y su información disponible.
